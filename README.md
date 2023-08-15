@@ -1,3 +1,5 @@
+
+
 <h1>VET CLINIC</h1>
 <!-- TABLE OF CONTENTS -->
 
@@ -29,7 +31,7 @@
 
 
 
-**vet_clinic** is a simple database that shows CRUD operations in a database table. 
+**vet_clinic** is a simple database that shows CRUD operations in a database table.
 
 ## 🛠 Built With <a name="built-with"></a>
 
