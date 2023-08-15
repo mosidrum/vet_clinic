@@ -9,11 +9,12 @@ SELECT * FROM animals WHERE neutered = true;
 SELECT * FROM animals WHERE name != 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3 ;
 ALTER TABLE animals
-ADD COLUMN species varchar(255);
 BEGIN
 UPDATE animals
-SET species = 'unspecifies';
+SET species = 'unspecified';
+SELECT * FROM animals;
 ROLLBACK --species column is back to null
+SELECT * FROM animals;
 BEGIN
 UPDATE animals
 SET species = 'digimon' WHERE NAME LIKE '%mon'
