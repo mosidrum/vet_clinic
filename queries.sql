@@ -103,7 +103,10 @@ SELECT vs.name as name, v.date_of_visit,a.name as animals_name FROM visits v INN
   spec.vets_id = vs.id AND spec.species_id = a.species_id WHERE spec.vets_id IS NULL;
 
 --What specialty should Maisy Smith consider getting? Look for the species she gets the most.
-  SELECT COUNT(visits.animal_id) FROM visits where vets_id =
- (select id from vets WHERE name = 'Maisy Smith') AND
- animal_id IN (SELECT id from animals WHERE species_id =
-  (SELECT id FROM species WHERE name = 'Digimon'));
+    SELECT species.name, count(*)
+    FROM visits
+    LEFT JOIN animals ON animals.id = visits.animal_id
+    LEFT JOIN species ON animals.species_id = species.id
+    LEFT JOIN vets ON vets.id = visits.vets_id
+    WHERE vets.name = 'Maisy Smith'
+    GROUP BY species.name
