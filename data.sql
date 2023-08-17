@@ -49,3 +49,67 @@ SELECT o.full_name as owners_name, a.name as animal_name, a.escape_attempts from
 
 SELECT o.full_name as owner_name, COUNT(a.id) as number_of_animals FROM animals a JOIN owners o ON a.owner_id = o.id GROUP BY
 o.full_name ORDER BY number_of_animals DESC LIMIT 1
+
+
+INSERT INTO vets (name,age,date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-04-23'),
+	('Maisy Smith', 26, '2019-01-17'),
+	('Stephanie Mendez', 64, '1981-05-04'),
+	('Jack Harkness', 38, '2008-7-08' )
+
+INSERT INTO specializations(species_id,vets_id)
+VALUES (1,1),
+	(1,3),
+	(2,3),
+	(2,4)
+
+-- Gabumon visit
+INSERT INTO visits
+VALUES(7,4,'2021-02-02')
+
+--all Agumon visits
+INSERT INTO visits
+VALUES(5,1,'2020-05-24'),
+	(5,3,'2020-07-22'),
+
+
+--all Pikachu visit
+INSERT INTO visits
+VALUES(9,2,'2020-01-05'),
+	(9,2,'2020-03-08'),
+	(9,2,'2020-05-14')
+
+-- Devimon visit
+INSERT INTO visits
+VALUES(6,3,'2021-05-04')
+
+-- Charmander
+INSERT INTO visits
+VALUES(3,4,'2021-02-24')
+
+-- all Plantmon visits
+INSERT INTO visits
+VALUES(1,2,'2019-12-21'),
+	(1,1,'2020-08-10'),
+	(1,2,'2021-04-07')
+
+-- Squirtle visit
+INSERT INTO visits
+VALUES(4,3,'2019-09-29')
+
+-- all Angemon visits
+INSERT INTO visits
+VALUES(2,4,'2020-10-03'),
+	(2,4,'2021-11-04')
+
+-- all Boarmon visits
+INSERT INTO visits
+VALUES(8,2,'2019-01-24'),
+	(8,2,'2019-05-15'),
+	(8,2,'2021-02-27'),
+	(8,2,'2020-08-03')
+
+-- all Blossom visits
+INSERT INTO visits
+VALUES(10,3,'2020-05-24'),
+	(10,1,'2020-01-11')
