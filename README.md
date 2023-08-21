@@ -33,6 +33,10 @@
 
 **vet_clinic** is a simple database that shows CRUD operations in a database table.
 
+### Schema
+
+![](../../../../Downloads/Screenshot 2023-08-21 at 15.54.24.png)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
